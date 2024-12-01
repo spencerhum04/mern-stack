@@ -1,8 +1,6 @@
 const express = require('express');
 const Workout = require('../models/workoutModel');
 
-const count = 10;
-
 const router = express.Router();
 
 // GET all workouts

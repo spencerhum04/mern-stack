@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Details from "../../components/details/details";
+import Form from "../../components/form/form";
 
 function Landing() {
     const [workouts, setWorkouts] = useState(null)
@@ -18,7 +19,7 @@ function Landing() {
     }, [])
 
     return (
-        <div>
+        <div className="flex flex-col gap-y-5 px-5">
             <div className="text-2xl">Landing Page</div>
             <div className="flex flex-col gap-y-10">
                 {workouts && workouts.map((workout) => (
@@ -27,6 +28,7 @@ function Landing() {
                     </div>
                 ))}
             </div>
+            <Form />
         </div>
     )
 }

@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useWorkoutsContext } from "../../hooks/useWorkoutsContext";
 
 const Form = () => {
+    const { dispatch } = useWorkoutsContext()
     const [title, setTitle] = useState('');
     const [load, setLoad] = useState('');
     const [reps, setReps] = useState('');
@@ -35,6 +37,7 @@ const Form = () => {
             setLoad('');
             setReps('');
             console.log('New workout added:', json);
+            dispatch({type: 'CREATE_WORKOUT', payload: json})
         } catch (err) {
             // setError('Failed to submit the workout. Please try again.');
         }

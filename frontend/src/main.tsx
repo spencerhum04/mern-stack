@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import './index.css';
 import Landing from './routes/landing/landing';
 import Navbar from './components/navbar/navbar';
+import { WorkoutsContextProvider } from './context/workoutContext';
 
 const Layout = () => (
   <>
@@ -27,6 +28,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <WorkoutsContextProvider>
+      <RouterProvider router={router} />
+    </WorkoutsContextProvider>
   </StrictMode>
 );

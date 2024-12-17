@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useWorkoutsContext } from "../../hooks/useWorkoutsContext";
 import Details from "../../components/details/details";
 import Form from "../../components/form/form";
@@ -17,7 +17,7 @@ function Landing() {
         }
 
         fetchWorkouts()
-    }, [])
+    }, [dispatch])
 
     return (
         <div className="flex flex-col gap-y-5 px-5">

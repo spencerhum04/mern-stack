@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <div>
             <Link to="/">
-                <div className="underline">Return to Home</div>
+                <div className="text-3xl font-bold">ExerPro</div>
             </Link>
         </div>
     )
